@@ -7,14 +7,52 @@
   </head>
   <body>
     <h1>Vamos probando</h1>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/viewform?embedded=true"
-      width="640"
-      height="936"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-      >Cargando…</iframe
+    <form
+      name="gform"
+      id="gform"
+      enctype="text/plain"
+      action="https://docs.google.com/forms/d/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/formResponse?"
+      target="hidden_iframe"
+      onsubmit="submitted=true;"
     >
+      Nombre:<br />
+      <input
+        type="text"
+        name="entry.1010265677"
+        id="name"
+        placeholder="Nombre"
+      />
+      <br />
+      Email:<br />
+      <input type="email" name="emailAddress" id="email" placeholder="Email" />
+      <br />
+      Mensaje:<br />
+      <textarea
+        name="entry.844287050"
+        id="message"
+        placeholder="Mensaje"
+      ></textarea>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none;"
+      onload="if(submitted) {}"
+    ></iframe>
+    <!-- https://docs.google.com/forms/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/viewform?usp=sf_link -->
+
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script>
+      var submitted = false
+    </script>
+    <script>
+      $('#gform').on('submit', function (e) {
+        $('#gform *').fadeOut(2000)
+        $('#gform').prepend('Your submission has been processed...')
+      })
+    </script>
   </body>
 </html>
