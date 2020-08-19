@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Vamos probando</h1>
-    <form
+    <!--<form
       name="gform"
       id="m_1486549674272938195ss-form"
       method="POST"
@@ -45,6 +45,39 @@
         id="m_1486549674272938195ss-submit"
         value="Enviar"
       />
+    </form>-->
+
+    <form
+      name="gform"
+      id="gform"
+      enctype="text/plain"
+      action="https://docs.google.com/forms/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/formResponse"
+      target="hidden_iframe"
+      onsubmit="submitted=true;"
+    >
+      Nombre:<br />
+      <input
+        type="text"
+        name="entry.1010265677"
+        name="entry.1010265677"
+        placeholder="Nombre"
+      />
+      <br />
+      Email:<br />
+      <input
+        type="email"
+        name="emailAddress"
+        id="emailAddress"
+        placeholder="Email"
+      />
+      <br />
+      Mensaje:<br />
+      <textarea
+        name="entry.844287050"
+        id="entry.844287050"
+        placeholder="Mensaje"
+      ></textarea>
+      <input type="submit" value="Submit" />
     </form>
 
     <iframe
@@ -53,6 +86,7 @@
       style="display: none;"
       onload="if(submitted) {}"
     ></iframe>
+
     <!-- https://docs.google.com/forms/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/viewform?usp=sf_link -->
 
     <script src="https://code.jquery.com/jquery-git.min.js"></script>
