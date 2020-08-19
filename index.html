@@ -3,49 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de ejemplo</title>
+    <title>Formulario de prueba estático mediante Google Forms</title>
   </head>
   <body>
-    <h1>Vamos probando</h1>
-    <!--<form
-      name="gform"
-      id="m_1486549674272938195ss-form"
-      method="POST"
-      enctype="text/plain"
-      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/formResponse"
-      target="hidden_iframe"
-      onsubmit="submitted=true;"
-    >
-      Nombre:<br />
-      <input
-        type="text"
-        name="entry.1010265677"
-        id="m_1486549674272938195entry_1010265677"
-        placeholder="Nombre"
-      />
-      <br />
-      Email:<br />
-      <input
-        type="email"
-        name="emailAddress"
-        id="m_1486549674272938195emailAddress"
-        placeholder="Email"
-      />
-      <br />
-      Mensaje:<br />
-      <textarea
-        name="entry.844287050"
-        id="m_1486549674272938195entry_844287050"
-        placeholder="Mensaje"
-      ></textarea>
-      <br />
-      <input
-        type="submit"
-        name="submit"
-        id="m_1486549674272938195ss-submit"
-        value="Enviar"
-      />
-    </form>-->
+    <h1>Formulario de prueba estático mediante Google Forms</h1>
+
+    <!-- https://docs.google.com/forms/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/viewform?usp=sf_link -->
 
     <form
       name="gform"
@@ -87,12 +50,11 @@
       onload="if(submitted) {}"
     ></iframe>
 
-    <!-- https://docs.google.com/forms/d/e/1FAIpQLScknFgqY4ntl9KkMz2oADBG-NVGhp-fVwPQKX0q1yb7cET0Sw/viewform?usp=sf_link -->
-
-    <script src="https://code.jquery.com/jquery-git.min.js"></script>
     <script>
       var submitted = false
     </script>
+    <!-- Ocultar formulario tras ser enviado -->
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
     <script>
       $('#gform').on('submit', function (e) {
         $('#gform *').fadeOut(2000)
